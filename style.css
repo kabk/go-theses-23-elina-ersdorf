@@ -1,45 +1,237 @@
-body{
-    font-family: Helvetica;
+body {
     background-color: #E3E6E8;
+    background-image: url('img/bg.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 70%;
+    cursor: crosshair;
+    }
+
+
+::-moz-selection { /* Code for Firefox */
+  color: white;
+  background: blue;
 }
 
-header {
-    position: fixed;
+::selection {
+  color: white;
+  background: blue;
 }
 
-main{
-    width: 600px;
+header h1 {
+    line-height: 90%;
+    font-family: "Space Mono";
+    font-size: 100pt;
+    margin-top: 0vh;
+    margin-bottom: 50vh;
+}
+.text-wrap-center{
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    width: 800px;
     margin: 0 auto;
-    padding-top: 20vh;
 }
 
 .text-wrapper p{
-    font-size: 15px;
-    font-family: 'Courier New', Courier, monospace;
-    text-align: justify;
+    font-family: 'DM Sans', sans-serif;
+    text-align: left;
     color: #05009B;
+    font-size: clamp(0.938rem, 0.968vw + 0.726rem, 1.5rem);
+    line-height: clamp(1.125rem, 1.161vw + 0.871rem, 1.8rem);
 }
 
 .image-wrapper{
     text-align: center;
 }
 
-.quote{
-    text-align: center;
-}
-
-.quote blockquote{
-    font-size: 15px;
-}
-
-.quote figcaption{
-    
-}
 
 h1 {
     text-align: center;
 }
+
 h2 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 3vh;
+    font-family: "Space Mono";
+    font-size: 3vw;
+}
+
+h3 {
+    margin-top: 150px;
+    font-family: "Space Mono";
+    font-size: 3vw;
+    line-height: 80%;
+}
+
+#navbar {
+    text-align: center;
+    overflow: hidden;
+
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+
+  }
+  
+  /* Navbar links */
+  #navbar a {
+    font-family: "Space Mono";
+    display: inline-block;
+    color: #000000;
+    text-align: justify;
+    padding: 7px;
+    text-decoration: none;
+  }
+
+  #navbar a:hover{
+    color:#05009B;
+  }
+  
+  /* Page content */
+  .content {
+    padding: 16px;
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+    row-gap: calc(var(--fluid-type-size) * 2);
+    transition: opacity 600ms ease-in-out;
+  }
+
+  .active,
+.inactive {
+  font-size: calc(var(--font-size-notification) / 1.2);
+  opacity: 1;
+}
+
+.smaller p{
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 10px;
+    line-height: 14pt;
+    color: #05009B;
+    padding: 10px;
+    padding: 1em;
+    word-wrap: break-word;
+    font-size: 0.7em;
+    line-height: 1.2em;
+    text-align: left;
+    padding-left: 1.5em;
+}
+
+.active {
+    opacity: 1;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .inactive {
+    position: absolute;
+  }
+  
+  .active,
+  .inactive {
+    opacity: 0;
+    width: 1%;
+    color: lightgray;
+    transition: opacity 600ms ease-in-out;
+  
+  }
+  
+  .active::before {
+    content: "Active";
+  }
+  
+  .inactive::before {
+    content: "Idle";
+  }
+  
+  .log-timer {
+    font-size: var(--font-size-notification);
+    width: 100%;
+    transition: opacity 600ms ease-in-out;
+  }
+  
+  .notification::before {
+    display: block;
+    font-size: calc(var(--font-size-notification) / 1.2);
+    color: rgba(175, 175, 175, 0.5);
+  
+  }
+  
+  .conceal {
+    transition: opacity 600ms ease-in-out;
+    opacity: 0;
+  }
+  
+  .reveal {
+    transition: opacity 600ms ease-in-out;
+    opacity: 1;
+  }
+  
+  .source {
+    font-family: sans-serif;
+    font-size: calc(var(--font-size-notification) / 1.2);
+  }
+  
+  .dimmed {
+    opacity: .0;
+  }
+
+img {
+    border-radius: 15px;
+}
+
+
+.footnote {
+    font-family: 'DM Sans', sans-serif;
+    padding: 1em;
+    word-wrap: break-word;
+    display: none;
+    width: auto;
+    border-radius: 5rem;
+  
+    font-size: 0.7em;
+    line-height: 1.2em;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    padding-left: 1.5em;
+    text-indent: -1.7em;
+  
+  }
+  
+  sup:hover + .footnote {
+    display: block;
+  }
+  
+  sup{
+   font-size: 50%;
+   color: rgb(0, 0, 255);
+  }
+  
+  .colophon {
+    font-family: "Space Mono";
+    margin-top: 10px;
+    font-size: 0.7em;
+    line-height: 4pt;
+    color: #000000;
+    padding: 10px;    
+    margin-left: 160px;
+}
+html {
+  scroll-behavior: smooth;
 }
