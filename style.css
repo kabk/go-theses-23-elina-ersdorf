@@ -1,9 +1,10 @@
 body {
-    background-color: #E3E6E8;
+    background-color: black;
     background-image: url('img/bg.png');
     background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 70%;
+    background-position: center;
+    background-size: auto 100vh;
+    background-attachment: fixed;
     cursor: crosshair;
     }
 
@@ -31,14 +32,14 @@ header h1 {
 }
 
 main {
-    width: 800px;
-    margin: 0 auto;
+    width: 80%;
+    margin: 0 10% 0 10%;
 }
 
 .text-wrapper p{
     font-family: 'DM Sans', sans-serif;
     text-align: left;
-    color: #05009B;
+    color: white;
     font-size: clamp(0.938rem, 0.968vw + 0.726rem, 1.5rem);
     line-height: clamp(1.125rem, 1.161vw + 0.871rem, 1.8rem);
 }
@@ -50,11 +51,13 @@ main {
 
 h1 {
     text-align: center;
+  color: aliceblue;
 }
 
 h2 {
     font-family: "Space Mono";
     font-size: 3vw;
+    color: aliceblue;
 }
 
 h3 {
@@ -62,6 +65,7 @@ h3 {
     font-family: "Space Mono";
     font-size: 3vw;
     line-height: 80%;
+    color: aliceblue;
 }
 
 #navbar {
@@ -79,14 +83,14 @@ h3 {
   #navbar a {
     font-family: "Space Mono";
     display: inline-block;
-    color: #000000;
+    color: white;
     text-align: justify;
     padding: 7px;
     text-decoration: none;
   }
 
   #navbar a:hover{
-    color:#05009B;
+    color:rgb(0, 0, 255);
   }
   
   /* Page content */
@@ -111,7 +115,7 @@ h3 {
     flex-direction: column;
     align-content: start;
     row-gap: calc(var(--fluid-type-size) * 2);
-    transition: opacity 600ms ease-in-out;
+    transition: opacity 900ms ease-in-out;
   }
 
   .active,
@@ -124,7 +128,7 @@ h3 {
     font-family: 'DM Sans', sans-serif;
     margin-top: 10px;
     line-height: 14pt;
-    color: #05009B;
+    color: white;
     padding: 10px;
     padding: 1em;
     word-wrap: break-word;
@@ -204,11 +208,10 @@ img {
     display: none;
     width: auto;
     border-radius: 5rem;
-  
+    color: aliceblue;
     font-size: 0.7em;
     line-height: 1.2em;
     text-align: left;
-    color: rgb(0, 0, 0);
     padding-left: 1.5em;
     text-indent: -1.7em;
   
@@ -220,7 +223,7 @@ img {
   
   sup{
    font-size: 50%;
-   color: rgb(0, 0, 255);
+   color: blue;
   }
   
   .colophon {
@@ -228,7 +231,7 @@ img {
     margin-top: 10px;
     font-size: 0.7em;
     line-height: 4pt;
-    color: #000000;
+    color: white;
     padding: 10px;    
     margin-left: 160px;
 }
